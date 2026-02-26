@@ -303,12 +303,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-image-wrapper::before {
-    content: '';
-    position: absolute;
-    inset: -20px;
-    border-radius: 50%;
-    border: 2px dashed var(--sage);
-    animation: spin-slow 60s linear infinite;
+    content: none;
 }
 
 .hero-image-wrapper::after {
@@ -424,47 +419,19 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--smoke);
 }
 
-.about-layout {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 64px;
-    align-items: center;
+.about-text {
+    max-width: 860px;
     margin-bottom: 72px;
 }
 
-.about-content p {
+.about-text p {
     margin-bottom: 18px;
     color: var(--graphite-mid);
     line-height: 1.8;
     font-size: 0.97rem;
 }
 
-.about-content p:last-child { margin-bottom: 0; }
-
-.about-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-image-placeholder {
-    width: 100%;
-    max-width: 320px;
-    aspect-ratio: 1;
-    background: linear-gradient(135deg, var(--teal-xlight) 0%, var(--sage) 100%);
-    border-radius: var(--radius-xl);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-    border: 1px solid var(--sage);
-}
-
-.about-logo {
-    width: 80%;
-    height: auto;
-    opacity: 0.85;
-}
+.about-text p:last-child { margin-bottom: 0; }
 
 /* Microbotanical subsection */
 .microbotanical-section {
@@ -618,12 +585,12 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.65;
 }
 
-.service-cta {
-    margin-top: 12px;
-    font-size: 0.88rem !important;
-    color: var(--gold) !important;
-    font-style: italic;
-    font-weight: 500 !important;
+.services-cta-note {
+    margin-top: 28px;
+    font-size: 0.97rem;
+    font-weight: 600;
+    color: var(--graphite);
+    text-align: center;
 }
 
 /* --- Team --- */
@@ -1043,18 +1010,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .section { padding: 72px 0; }
-
-    .about-layout {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .about-image { order: -1; }
-
-    .about-image-placeholder {
-        max-width: 260px;
-        margin: 0 auto;
-    }
 
     .remains-grid {
         grid-template-columns: 1fr;
